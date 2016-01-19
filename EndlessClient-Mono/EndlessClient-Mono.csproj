@@ -39,18 +39,23 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>Resources\Game.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="..\EndlessClient\EndlessClient\BlinkingLabel.cs">
-      <Link>BlinkingLabel.cs</Link>
-    </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\Character.cs">
       <Link>Character.cs</Link>
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\Config.cs">
       <Link>Config.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\Controls\BlinkingLabel.cs">
+      <Link>Controls\BlinkingLabel.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\Controls\ChatTextBox.cs">
+      <Link>Controls\ChatTextBox.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\Controls\ScrollBar.cs">
+      <Link>Controls\ScrollBar.cs</Link>
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\Dialogs\BankAccountDialog.cs">
       <Link>Dialogs\BankAccountDialog.cs</Link>
@@ -139,14 +144,8 @@
     <Compile Include="..\EndlessClient\EndlessClient\HUD\ChatPanel.cs">
       <Link>HUD\ChatPanel.cs</Link>
     </Compile>
-    <Compile Include="..\EndlessClient\EndlessClient\HUD\ChatTextBox.cs">
-      <Link>HUD\ChatTextBox.cs</Link>
-    </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\HUD\HUD.cs">
       <Link>HUD\HUD.cs</Link>
-    </Compile>
-    <Compile Include="..\EndlessClient\EndlessClient\HUD\HUDElement.cs">
-      <Link>HUD\HUDElement.cs</Link>
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\HUD\InventoryPanel.cs">
       <Link>HUD\InventoryPanel.cs</Link>
@@ -159,9 +158,6 @@
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\HUD\PartyPanel.cs">
       <Link>HUD\PartyPanel.cs</Link>
-    </Compile>
-    <Compile Include="..\EndlessClient\EndlessClient\HUD\ScrollBar.cs">
-      <Link>HUD\ScrollBar.cs</Link>
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\HUD\SettingsPanel.cs">
       <Link>HUD\SettingsPanel.cs</Link>
@@ -180,6 +176,21 @@
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\HUD\StatsPanel.cs">
       <Link>HUD\StatsPanel.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\HUD\StatusBars\BaseStatusBar.cs">
+      <Link>HUD\StatusBars\BaseStatusBar.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\HUD\StatusBars\HPStatusBar.cs">
+      <Link>HUD\StatusBars\HPStatusBar.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\HUD\StatusBars\SPStatusBar.cs">
+      <Link>HUD\StatusBars\SPStatusBar.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\HUD\StatusBars\TNLStatusBar.cs">
+      <Link>HUD\StatusBars\TNLStatusBar.cs</Link>
+    </Compile>
+    <Compile Include="..\EndlessClient\EndlessClient\HUD\StatusBars\TPStatusBar.cs">
+      <Link>HUD\StatusBars\TPStatusBar.cs</Link>
     </Compile>
     <Compile Include="..\EndlessClient\EndlessClient\Input\ArrowKeyListener.cs">
       <Link>Input\ArrowKeyListener.cs</Link>
@@ -280,7 +291,12 @@
       <Name>EOLib-mono</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="..\EndlessClient\EndlessClient\Resources\Game.ico">
+      <Link>Resources\Game.ico</Link>
+    </Content>
+    <Content Include="Resources\Game.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
   <PropertyGroup>

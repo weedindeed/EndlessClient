@@ -16,8 +16,8 @@
     <XnaProfile>HiDef</XnaProfile>
     <XnaCrossPlatformGroupID>7a11ebb4-a5ec-4dee-a136-9e6b0087bddb</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
-    <ApplicationIcon>Game.ico</ApplicationIcon>
-    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <ApplicationIcon>Resources\Game.ico</ApplicationIcon>
+    <Thumbnail>Resources\GameThumbnail.png</Thumbnail>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -137,7 +137,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BlinkingLabel.cs" />
+    <Compile Include="Controls\BlinkingLabel.cs" />
     <Compile Include="Character.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="Dialogs\BankAccountDialog.cs" />
@@ -169,20 +169,24 @@
     <Compile Include="GameUI.cs" />
     <Compile Include="HUD\ActiveSpellsPanel.cs" />
     <Compile Include="HUD\ChatPanel.cs" />
-    <Compile Include="HUD\ChatTextBox.cs" />
+    <Compile Include="Controls\ChatTextBox.cs" />
     <Compile Include="HUD\HUD.cs" />
-    <Compile Include="HUD\HUDElement.cs" />
+    <Compile Include="HUD\StatusBars\BaseStatusBar.cs" />
     <Compile Include="HUD\InventoryPanel.cs" />
     <Compile Include="HUD\Inventory\EOInventoryItem.cs" />
     <Compile Include="HUD\OnlineListPanel.cs" />
     <Compile Include="HUD\PartyPanel.cs" />
-    <Compile Include="HUD\ScrollBar.cs" />
+    <Compile Include="Controls\ScrollBar.cs" />
     <Compile Include="HUD\SettingsPanel.cs" />
     <Compile Include="HUD\SoundPanel.cs" />
     <Compile Include="HUD\Spells\EmptySpellIcon.cs" />
     <Compile Include="HUD\Spells\ISpellIcon.cs" />
     <Compile Include="HUD\Spells\SpellIcon.cs" />
     <Compile Include="HUD\StatsPanel.cs" />
+    <Compile Include="HUD\StatusBars\HPStatusBar.cs" />
+    <Compile Include="HUD\StatusBars\SPStatusBar.cs" />
+    <Compile Include="HUD\StatusBars\TNLStatusBar.cs" />
+    <Compile Include="HUD\StatusBars\TPStatusBar.cs" />
     <Compile Include="Input\ArrowKeyListener.cs" />
     <Compile Include="Input\ControlKeyListener.cs" />
     <Compile Include="Input\FunctionKeyListener.cs" />
@@ -209,8 +213,8 @@
     <Compile Include="World.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Game.ico" />
-    <Content Include="GameThumbnail.png" />
+    <Content Include="Resources\Game.ico" />
+    <Content Include="Resources\GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\EOCLI\EOCLI.vcxproj">
